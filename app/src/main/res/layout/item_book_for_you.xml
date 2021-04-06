@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="4dp"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="ویژه"
+        android:background="@drawable/bg_txt_for_you"
+        android:paddingLeft="4dp"
+        android:paddingBottom="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="4dp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="-1dp"
+        android:id="@+id/card_img_book"
+        android:layout_width="120dp"
+        android:layout_height="170dp"
+        app:cardCornerRadius="16dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:transitionName="img_book"
+                android:id="@+id/iv_homeEbook_new"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tv_homeEbook_bookName"
+        android:layout_below="@id/card_img_book"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:text="Book Name"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:maxLength="15"
+        />
+    <TextView
+        android:id="@+id/tv_homeEbook_bookAuthor"
+        android:layout_below="@id/tv_homeEbook_bookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:maxLines="1"
+        />
+
+</RelativeLayout>

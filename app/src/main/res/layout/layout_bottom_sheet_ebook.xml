@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:layoutDirection="rtl"
+    android:id="@+id/card_bottom_sheet"
+    android:background="@drawable/shape_bg_bottomsheet">
+
+    <TextView
+        android:id="@+id/txt_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="جزئیات سفارش"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        />
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#3C3C3C"
+        android:layout_below="@id/txt_detail"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        />
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/view_line"
+       android:layout_marginTop="8dp"
+
+       >
+       <androidx.cardview.widget.CardView
+           android:id="@+id/card_img"
+           android:layout_width="100dp"
+           android:layout_height="150dp"
+           app:cardCornerRadius="16dp"
+           >
+           <ImageView
+               android:id="@+id/iv_bottomsheet_book"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:scaleType="centerCrop"
+               />
+
+       </androidx.cardview.widget.CardView>
+
+       <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+           android:layout_width="80dp"
+           android:layout_height="35dp"
+           android:layout_alignParentLeft="true"
+           android:layout_marginTop="24dp"
+           android:layout_marginLeft="8dp"
+           app:initialNumber="1"
+
+           />
+
+
+          <TextView
+              android:id="@id/tv_bottomsheet_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/black"
+              android:textStyle="bold"
+              android:textSize="16dp"
+              android:text="bookName"
+              android:layout_toLeftOf="@id/card_img"
+              android:layout_marginRight="8dp"
+              android:layout_marginLeft="112dp"
+              android:layout_marginTop="24dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Author"
+              android:id="@+id/tv_bottomsheet_author"
+              android:textColor="@color/black"
+              android:textSize="14sp"
+              android:layout_below="@id/tv_bottomsheet_name"
+              android:layout_marginTop="8dp"
+              android:textStyle="bold"
+              android:layout_toLeftOf="@id/card_img"
+              android:layout_marginRight="8dp"
+              android:layout_marginLeft="112dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+              />
+
+          <TextView
+              android:layout_toLeftOf="@id/card_img"
+              android:layout_marginRight="8dp"
+              android:id="@+id/tv_bootomsheet_sumary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_bottomsheet_author"
+              android:layout_marginTop="16dp"
+              android:lineSpacingExtra="4dp"
+              android:maxLines="2"
+              android:text="این کتاب اولین بار توسط محمود فرجامی در سال ۱۳۸۶ ترجمه شد[۳] و به دلیل عدم دریافت مجوز نشر به صورت رایگان برای دانلود روی سایت شخصی وی قرار گرفت. مترجم از مخاطبین این کتاب خواست اگر از محتوای کتاب راضی بودند مبلغی به اندازه پول یک پیتزا را به حساب مترجم واریز کنند.[۴] سرانجام در سال ۱۳۹۳ توسط انتشارات تیسا در ۲۳۲ صفحه منتشر[۵] و به سرعت تبدیل به یکی از پرفروشترین کتابهای غیرداستانی شد،[۶] تا جایی که در سی‌امین نمایشگاه بین‌المللی کتاب تهران چاپ بیست و نهم این کتاب با تیراژ پنج هزار نسخه در دسترس علاقه‌مندان قرار گرفت.[۷]
+
+کتاب بیشعوری با ترجمه محمود فرجامی در کابل توسط نشر زریاب و در لندن توسط نشر اچ اند اس مدیا نیز به‌طور جداگانه به چاپ رسیده‌است.[۸]پس از استقبال گسترده از این کتاب، بیشعوری بارها توسط مترجمان و انتشارات دیگر با همان عنوان و طرح اولیه روی جلد، به صورت غیرقانونی[۹] به بازار عرضه شده‌است.
+
+فرجامی خاطرنشان کرده‌است که «حق انحصاری» ترجمه و فروش کتاب بیشعوری (Asshole No More) را از ناشر و نویسنده خریده و انتشار هر ترجمهٔ دیگری از آن غیرقانونی است."
+              android:textColor="@color/black"
+              android:textSize="14sp"
+              android:layout_toRightOf="@id/btn_pressbuy"
+              android:layout_marginLeft="8dp"/>
+
+
+       <Button
+           android:id="@+id/btn_pressbuy"
+           android:layout_width="wrap_content"
+           android:layout_height="35dp"
+           android:text="ثبت سفارش"
+           android:textStyle="bold"
+           android:textSize="14sp"
+           android:background="@drawable/shape_btn_buy_"
+           android:layout_below="@id/tv_bottomsheet_author"
+           android:layout_alignParentLeft="true"
+           android:layout_marginTop="28dp"
+           android:layout_marginLeft="8dp"
+           />
+       <View
+           android:id="@+id/view_line1"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#3C3C3C"
+           android:layout_below="@id/card_img"
+           android:layout_marginTop="8dp"
+           android:layout_marginRight="8dp"
+           />
+
+       <TextView
+           android:id="@+id/txt_foru"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="برای شما:"
+           android:textSize="14sp"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:layout_below="@id/view_line1"
+           android:layout_marginTop="8dp"
+           />
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_bottomsheet"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/txt_foru"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="8dp"
+           />
+
+   </RelativeLayout>
+</RelativeLayout>

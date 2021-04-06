@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeEbookActivity"
+    android:background="#A9CFED"
+    android:layoutDirection="rtl"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/img_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_menu_24"
+                    app:tint="@color/black"
+                    android:padding="16dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/popular"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_card_popular"
+                    android:layout_below="@id/img_menu"
+                    android:layout_marginRight="8dp"
+                    android:padding="8dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_popular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="محبوب ترین ها :"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="مشاهده همه"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_popular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@id/txt_popular"
+                        />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/voice"
+                    android:layout_marginTop="48dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_card_voice_books"
+                    android:layout_below="@id/popular"
+                    android:layout_marginLeft="8dp"
+                    android:padding="8dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="کتاب های صوتی :"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="مشاهده همه"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_voice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_below="@id/txt_voice"
+                        />
+
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="جدیدترین ها :"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/voice"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="48dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مشاهده همه"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/voice"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="48dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/txt_new"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    />
+
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
