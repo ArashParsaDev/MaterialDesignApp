@@ -35,6 +35,7 @@ public class DetailBookActivity extends AppCompatActivity {
     AdapterForYou adapterForYou;
     List<Book> list_for_you = new ArrayList<>();
 
+
     Button byn_buy;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
