@@ -1,14 +1,11 @@
-package com.example.materialdesignapp.part01;
+package com.example.materialdesignapp.part1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,10 +13,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.materialdesignapp.HomeEbookActivity;
 import com.example.materialdesignapp.R;
-import com.example.materialdesignapp.part01.adapter.AdapterForYou;
-import com.example.materialdesignapp.part01.model.Book;
+import com.example.materialdesignapp.part1.adapter.AdapterForYou;
+import com.example.materialdesignapp.part1.model.Book;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.squareup.picasso.Picasso;
 
