@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.part01.model;
+package com.example.materialdesignapp.part1.model;
 
 public class Book {
 

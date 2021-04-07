@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_baseline_stars_24"
         android:layout_margin="8dp"
-        />
+        app:tint="@color/colorAccent_ebook" />
 
     <androidx.cardview.widget.CardView
         app:cardElevation="-1dp"

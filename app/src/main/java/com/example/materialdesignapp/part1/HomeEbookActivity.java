@@ -1,18 +1,21 @@
-package com.example.materialdesignapp;
+package com.example.materialdesignapp.part1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Adapter;
+import android.view.View;
+import android.widget.ImageView;
 
-import com.example.materialdesignapp.part01.adapter.AdapterNewBook;
-import com.example.materialdesignapp.part01.adapter.AdapterPopularBook;
-import com.example.materialdesignapp.part01.adapter.AdapterVoiceBook;
-import com.example.materialdesignapp.part01.model.Book;
+import com.example.materialdesignapp.R;
+import com.example.materialdesignapp.part1.adapter.AdapterNewBook;
+import com.example.materialdesignapp.part1.adapter.AdapterPopularBook;
+import com.example.materialdesignapp.part1.adapter.AdapterVoiceBook;
+import com.example.materialdesignapp.part1.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +30,9 @@ public class HomeEbookActivity extends AppCompatActivity {
     //Book New
     RecyclerView rv_new;
     AdapterNewBook newBookAdapter;
+
+    ImageView img_menu;
+    DrawerLayout drawerLayout;
 
 
     List<Book> list_popular = new ArrayList<>();
@@ -98,5 +104,28 @@ public class HomeEbookActivity extends AppCompatActivity {
         newBookAdapter = new AdapterNewBook(this,list_new);
         rv_new.setAdapter(newBookAdapter);
 
+
+        img_menu = findViewById(R.id.img_menu);
+        drawerLayout =findViewById(R.id.drawerlayout_books);
+        img_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(drawerLayout.isDrawerVisible(GravityCompat.START))
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                else {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+            }
+        });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerVisible(GravityCompat.START))
+            drawerLayout.closeDrawer(GravityCompat.START);
+        else{
+            super.onBackPressed();
+        }
     }
 }

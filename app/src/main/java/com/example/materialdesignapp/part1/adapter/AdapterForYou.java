@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.part01.adapter;
+package com.example.materialdesignapp.part1.adapter;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
@@ -12,22 +12,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.materialdesignapp.R;
-import com.example.materialdesignapp.part01.DetailBookActivity;
-import com.example.materialdesignapp.part01.model.Book;
+import com.example.materialdesignapp.part1.DetailBookActivity;
+import com.example.materialdesignapp.part1.model.Book;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class AdapterNewBook extends RecyclerView.Adapter<AdapterNewBook.MyViewHolder> {
+public class AdapterForYou extends RecyclerView.Adapter<AdapterForYou.MyViewHolder> {
     Context context;
     List<Book> data;
 
 
-    public AdapterNewBook(Context context, List<Book> data) {
+    public AdapterForYou(Context context, List<Book> data) {
         this.data = data;
         this.context = context;
     }
@@ -35,7 +34,7 @@ public class AdapterNewBook extends RecyclerView.Adapter<AdapterNewBook.MyViewHo
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_book_new,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_book_for_you,parent,false);
         return new MyViewHolder(view);
     }
 

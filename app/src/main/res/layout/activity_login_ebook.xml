@@ -7,7 +7,7 @@
     android:background="@drawable/mandala"
     android:layoutDirection="rtl"
     android:textDirection="rtl"
-    tools:context=".part01.LoginEbookActivity">
+    tools:context=".part1.LoginEbookActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_login"

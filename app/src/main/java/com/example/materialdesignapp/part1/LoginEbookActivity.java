@@ -1,4 +1,4 @@
-package com.example.materialdesignapp.part01;
+package com.example.materialdesignapp.part1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.materialdesignapp.HomeEbookActivity;
-import com.example.materialdesignapp.MainActivity;
 import com.example.materialdesignapp.R;
 
 public class LoginEbookActivity extends AppCompatActivity {

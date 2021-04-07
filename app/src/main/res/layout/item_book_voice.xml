@@ -28,6 +28,7 @@
                 app:srcCompat="@drawable/ic_baseline_headset_24"
                 android:layout_alignParentLeft="true"
                 android:layout_margin="8dp"
+                app:tint="@color/colorAccent_ebook"
                 />
 
         </RelativeLayout>

@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <!-- Base application theme. -->
-        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-            <!-- Customize your theme here. -->
-            <item name="colorPrimary">#2196F3</item>
-            <item name="colorPrimaryDark">#3F51B5</item>
-            <item name="colorAccent">#E91E63</item>
-            <item name="android:typeface">monospace</item>
-        </style>
-    <style name="AppTheme_Ebook" parent="Theme.AppCompat.NoActionBar">
+    <!-- theme default -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#3F51B5</item>
+        <item name="colorAccent">#E91E63</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+    <!--  theme fullscreen-->
+    <style name="AppTheme_Ebook" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#CE9CEC</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark_ebook</item>
         <item name="colorAccent">@color/colorAccent_ebook</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-    <style name="AppTheme_Ebook1" parent="Theme.AppCompat.NoActionBar">
+    <!--  theme not fullscreen-->
+
+    <style name="AppTheme_Ebook1" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#CE9CEC</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark_ebook</item>
         <item name="colorAccent">@color/colorAccent_ebook</item>
-
     </style>
-    
-    
+
+    <!--  bottom sheet-->
     <style name="BottomSheet_Ebook" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
     </style>
-    
-    <style name="BottomSheet_Ebook_Layout" parent="Animation.Design.BottomSheetDialog">
+
+    <style name="BottomSheet_Ebook_Layout" parent="Theme.Design.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheet_Ebook</item>
     </style>
+    <!-- theme food page-->
+
+
 
 </resources>
