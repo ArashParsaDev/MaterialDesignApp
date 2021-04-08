@@ -11,22 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".part1.DetailBookActivity"
-            android:theme="@style/AppTheme_Ebook1">
-
-        </activity>
-        <activity android:name=".part1.HomeEbookActivity"
-            android:theme="@style/AppTheme_Ebook1">
-
-        </activity>
-        <activity
-            android:name=".part1.LoginEbookActivity"
-            android:theme="@style/AppTheme_Ebook">
+        <activity android:name=".part2.HomeActivityFood"
+            android:theme="@style/AppTheme_Food">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".part1.DetailBookActivity"
+            android:theme="@style/AppTheme_Ebook_normal">
+        </activity>
+        <activity
+            android:name=".part1.HomeEbookActivity"
+            android:theme="@style/AppTheme_Ebook_normal">
+        </activity>
+        <activity
+            android:name=".part1.LoginEbookActivity"
+            android:theme="@style/AppTheme_Ebook_FullScreen">
+
         </activity>
     </application>
 

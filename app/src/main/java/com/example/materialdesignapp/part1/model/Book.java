@@ -2,12 +2,19 @@ package com.example.materialdesignapp.part1.model;
 
 public class Book {
 
-    private String name,author,link_img;
+    private String name,author,link_img,price;
 
     public Book(String name, String author, String link_img) {
         this.name = name;
         this.author = author;
         this.link_img = link_img;
+    }
+
+    public Book(String name, String author, String link_img, String price) {
+        this.name = name;
+        this.author = author;
+        this.link_img = link_img;
+        this.price = price;
     }
 
     public Book(String link_img) {
@@ -36,5 +43,13 @@ public class Book {
 
     public void setLink_img(String link_img) {
         this.link_img = link_img;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }

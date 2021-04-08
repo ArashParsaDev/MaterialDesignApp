@@ -43,6 +43,8 @@ public class AdapterNewBook extends RecyclerView.Adapter<AdapterNewBook.MyViewHo
         Picasso.with(context).load(data.get(position).getLink_img()).into(holder.img_book);
         holder.tv_author.setText(data.get(position).getAuthor());
         holder.tv_name.setText(data.get(position).getName());
+        holder.tv_price.setText(data.get(position).getPrice());
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +53,7 @@ public class AdapterNewBook extends RecyclerView.Adapter<AdapterNewBook.MyViewHo
                 intent.putExtra("name",data.get(position).getName());
                 intent.putExtra("author",data.get(position).getAuthor());
                 intent.putExtra("link_img",data.get(position).getLink_img());
+                intent.putExtra("price",data.get(position).getPrice());
 
                 ActivityOptions options = null;
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -72,7 +75,7 @@ public class AdapterNewBook extends RecyclerView.Adapter<AdapterNewBook.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView img_book;
-        TextView tv_name,tv_author;
+        TextView tv_name,tv_author,tv_price;
 
 
 
@@ -81,6 +84,7 @@ public class AdapterNewBook extends RecyclerView.Adapter<AdapterNewBook.MyViewHo
             img_book= itemView.findViewById(R.id.iv_homeEbook_new);
             tv_name= itemView.findViewById(R.id.tv_homeEbook_bookName);
             tv_author= itemView.findViewById(R.id.tv_homeEbook_bookAuthor);
+            tv_price= itemView.findViewById(R.id.tv_homeEbook_bookPrice);
         }
     }
 }

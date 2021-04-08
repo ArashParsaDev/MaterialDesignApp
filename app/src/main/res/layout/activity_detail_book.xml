@@ -101,7 +101,8 @@
                             android:text="bookName"
                             android:textColor="@color/black"
                             android:textSize="16dp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:layout_marginLeft="32dp"/>
 
                         <TextView
                             android:id="@+id/tv_detail_author"
@@ -133,12 +134,15 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/tv_detailBook_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="25000"
+                                android:text=""
                                 android:textColor="#C62828"
                                 android:textSize="14sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                />
+
                         </LinearLayout>
 
                         <LinearLayout

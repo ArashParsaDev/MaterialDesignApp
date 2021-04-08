@@ -15,7 +15,8 @@
 
     //part2
     <color name="colorAccent_food">#FFEB3B</color>
-    <color name="background_color_food">#ffcc80</color>
-    <color name="textcolor_food">#000</color>
+    <color name="background_color_food">#fff8e1</color>
+    <color name="background_color_card_food">#ffa000</color>
+    <color name="textcolor_food">#1b1b1b</color>
 
 </resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layoutDirection="rtl"
+    android:background="@color/background_color_food"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        >
+        <TextView
+            android:id="@+id/tv_item_catFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:background="@drawable/bg_txt_category_food"
+            android:text="پیتزا"
+            android:paddingLeft="16dp"
+            android:textSize="12sp"
+            android:paddingRight="16dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textStyle="bold"
+            android:textColor="@color/textcolor_food"
+            />
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
