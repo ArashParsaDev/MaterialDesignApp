@@ -1,6 +1,7 @@
 package com.example.materialdesignapp.part2.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.materialdesignapp.R;
+import com.example.materialdesignapp.part2.DetailFoodActivity;
 import com.example.materialdesignapp.part2.model.Food;
 import com.squareup.picasso.Picasso;
 
@@ -44,6 +46,22 @@ public class SliderAdapter extends PagerAdapter {
         Picasso.with(context).load(data.get(position).getLink_img()).into(iv_food);
         //fix rtl
         view.setRotationY(-180);
+
+        //show in detailFood
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailFoodActivity.class);
+                intent.putExtra("name",data.get(position).getName());
+                intent.putExtra("price",data.get(position).getPrice());
+                intent.putExtra("count",data.get(position).getCount());
+                intent.putExtra("rate",data.get(position).getRating());
+                intent.putExtra("link_img",data.get(position).getLink_img());
+                intent.putExtra("desc",data.get(position).getDescription());
+                context.startActivity(intent);
+            }
+        });
+
 
         container.addView(view);
         return view;

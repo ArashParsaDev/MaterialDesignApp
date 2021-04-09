@@ -1,7 +1,6 @@
 package com.example.materialdesignapp.part2.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,17 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.materialdesignapp.R;
-import com.example.materialdesignapp.part2.DetailFoodActivity;
 import com.example.materialdesignapp.part2.model.Food;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class NewFoodAdapter extends RecyclerView.Adapter<NewFoodAdapter.MyViewHolder> {
+public class RecommendFoodDetailAdapter extends RecyclerView.Adapter<RecommendFoodDetailAdapter.MyViewHolder> {
     Context context;
     List<Food> data;
 
-    public NewFoodAdapter(Context context, List<Food> data) {
+    public RecommendFoodDetailAdapter(Context context, List<Food> data) {
         this.context = context;
         this.data = data;
     }
@@ -30,7 +28,7 @@ public class NewFoodAdapter extends RecyclerView.Adapter<NewFoodAdapter.MyViewHo
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_food_new,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_food_detail_recommend,parent,false);
         return new MyViewHolder(view);
     }
 
@@ -42,21 +40,6 @@ public class NewFoodAdapter extends RecyclerView.Adapter<NewFoodAdapter.MyViewHo
         holder.tv_rate.setText(data.get(position).getRating());
         holder.tv_price.setText("قیمت : "+data.get(position).getPrice()+" تومان");
         Picasso.with(context).load(data.get(position).getLink_img()).into(holder.iv_recommend);
-
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, DetailFoodActivity.class);
-                intent.putExtra("name",data.get(position).getName());
-                intent.putExtra("price",data.get(position).getPrice());
-                intent.putExtra("count",data.get(position).getCount());
-                intent.putExtra("rate",data.get(position).getRating());
-                intent.putExtra("link_img",data.get(position).getLink_img());
-                intent.putExtra("desc",data.get(position).getDescription());
-                context.startActivity(intent);
-            }
-        });
 
     }
 
