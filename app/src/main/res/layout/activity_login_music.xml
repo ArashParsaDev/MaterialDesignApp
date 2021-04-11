@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_music"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    tools:context=".part3.LoginMusicActivity">
+
+    <LinearLayout
+        android:background="@drawable/bg_rel_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="32dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+       <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            app:startIconTint="@color/white"
+            app:hintTextColor="@color/white"
+            app:boxStrokeColor="@color/background_color_card_music"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="نام کاربری"
+                android:inputType="text"
+                android:paddingRight="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@color/textcolor_music"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24"
+            app:startIconTint="@color/white"
+            app:boxStrokeColor="@color/background_color_card_music"
+            app:hintTextColor="@color/white"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="رمز عبور"
+                android:textColor="@color/white"
+                android:inputType="textPassword"
+                android:paddingRight="8dp"
+                android:textSize="14sp"
+                android:textAlignment="viewStart"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@color/textcolor_music"
+            app:startIconDrawable="@drawable/ic_baseline_phone_24"
+            app:startIconTint="@color/white"
+            app:boxStrokeColor="@color/background_color_card_music"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="موبایل"
+                android:inputType="phone"
+                android:paddingRight="8dp"
+                android:textAlignment="viewStart"
+                android:maxLength="11"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ثبت نام"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/bg_login_music"
+            />
+
+        <ImageView
+            android:id="@+id/iv_go_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:rotation="180"
+            android:layout_gravity="left"
+            android:background="@drawable/bg_go_home_music"
+            android:padding="5dp"
+            app:tint="@color/background_color_card_music" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

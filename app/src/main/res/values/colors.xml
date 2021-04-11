@@ -19,4 +19,12 @@
     <color name="background_color_card_food">#ffa000</color>
     <color name="textcolor_food">#1b1b1b</color>
 
+
+    //part2
+    <color name="colorAccent_music">#FFEB3B</color>
+    <color name="background_color_music">#102027</color>
+    <color name="background_color_card_music">#ffa000</color>
+    <color name="background_color_card_music1">#1a237e</color>
+    <color name="textcolor_music">#ffffff</color>
+
 </resources>

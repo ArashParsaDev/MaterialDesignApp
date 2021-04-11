@@ -39,6 +39,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--  theme fullscreen part 3-->
+    <style name="AppTheme_Music" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/background_color_card_music1</item>
+        <item name="colorPrimaryDark">@color/background_color_music</item>
+        <item name="colorAccent">@color/colorAccent_ebook</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+
+    </style>
 
 
 </resources>

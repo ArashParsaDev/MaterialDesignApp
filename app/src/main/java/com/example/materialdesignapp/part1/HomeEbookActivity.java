@@ -44,46 +44,31 @@ public class HomeEbookActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_ebook);
-
-        rv_popular= findViewById(R.id.rv_popular);
-        rv_new= findViewById(R.id.rv_navigation_new);
-        rv_voice= findViewById(R.id.rv_voice);
-
         //rv Popular
-        rv_popular.setHasFixedSize(true);
-        rv_popular.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false));
-
-        list_popular.add(new Book("The Glass Hotel","Emily St. John Mandel","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQgxmv3DoWGvFX22GTpxsmby-dsmVaqyQFy87e8eX-LZq4lToT6"));
-        list_popular.add(new Book("Hamnet","Maggie O'Farrell","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQyRaCf9bJ_OhxCTfUs8xSZ8jlb6pOyjVioRfWfJwRJWclJhIcu"));
-        list_popular.add(new Book("Real Life","Brandon Taylor","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRhPHCvh2bneBkyySO5Kxp5LevIQNLe_0r7XC1moHtvWZ-Gm0Nm"));
-        list_popular.add(new Book("Leave the World Behind","Rumaan Alam","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKcRb1t1Rd0z6wC7XJ0Oyf95yYw0egwiPWARfxmJzz_wPL3Nz"));
-        list_popular.add(new Book("Weather","Jenny Offill","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpS4J1a21qkduedyAiQvDSNGuNEY4PQewf0BxItK4iEGKV_QNj"));
-        list_popular.add(new Book("Luster","Raven Leilani","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR-nudFqcb_jYFcd5n5wIlBHspz0koXdzAz7ioG_dMV6QPTFy5f"));
-        list_popular.add(new Book("The Mirror and the Light","Hilary Mantel","https://www.thehindu.com/books/r545hy/article31532333.ece/alternates/FREE_435/10LRMantelcover"));
-        list_popular.add(new Book("Transcendent Kingdom","Yaa Gyasi","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJokCRDugLCn8aeOW4Kf4W4IXTFouSAaoBZSqWHPgong9YFQgU"));
-        list_popular.add(new Book("Deacon King Kong: A Novel","James McBride","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLgtVh3rrUgU8Z-1r4MTa29KzMXp6QOHPS_wBaHdKQzzfTdYTJ"));
-        list_popular.add(new Book("A Promised Land","Barack Obama","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSQLdPkH8rcP9J5312fLiWkkAIDeb_la_z0kCXsswJf0DMfa5Ay"));
-        list_popular.add(new Book("Vesper Flights","Helen Macdonald","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQzAYTcBXd-MuumP8XboKDATh5kD3dUFjxlmlgwTSBXov0g68p-"));
-        list_popular.add(new Book("Minor Feelings: An Asian American Reckoning","Cathy Park Hong","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTdTqd0oZNE7qducKX6D0R1HbKOfH8o5QNve7t-hoPoKYAqF0_u"));
-        list_popular.add(new Book("Jack","Marilynne Robinson","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEkiPC8rLSUozNVPmKCTOtzVDYI6O2s-oLQDeEq7SKssGBbqfN"));
-
-        popularBookAdapter = new AdapterPopularBook(this,list_popular);
-        rv_popular.setAdapter(popularBookAdapter);
-
-
+        getHomePopular();
         //rv Voice
-        rv_voice.setHasFixedSize(true);
-        rv_voice.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false));
-        list_voice.add(new Book("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQgxmv3DoWGvFX22GTpxsmby-dsmVaqyQFy87e8eX-LZq4lToT6"));
-        list_voice.add(new Book("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQyRaCf9bJ_OhxCTfUs8xSZ8jlb6pOyjVioRfWfJwRJWclJhIcu"));
-        list_voice.add(new Book("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRhPHCvh2bneBkyySO5Kxp5LevIQNLe_0r7XC1moHtvWZ-Gm0Nm"));
-        list_voice.add(new Book("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKcRb1t1Rd0z6wC7XJ0Oyf95yYw0egwiPWARfxmJzz_wPL3Nz"));
-
-
-        vocieBookAdapter = new AdapterVoiceBook(this,list_voice);
-        rv_voice.setAdapter(vocieBookAdapter);
-
+        getHomeVoice();
         //rv new
+        getHomeNew();
+
+
+        img_menu = findViewById(R.id.img_menu);
+        drawerLayout =findViewById(R.id.drawerlayout_books);
+        img_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(drawerLayout.isDrawerVisible(GravityCompat.START))
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                else {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+            }
+        });
+
+    }
+
+    private void getHomeNew() {
+        rv_new= findViewById(R.id.rv_navigation_new);
         rv_new.setHasFixedSize(true);
         rv_new.setLayoutManager(new GridLayoutManager(this,3));
 
@@ -103,21 +88,43 @@ public class HomeEbookActivity extends AppCompatActivity {
 
         newBookAdapter = new AdapterNewBook(this,list_new);
         rv_new.setAdapter(newBookAdapter);
+    }
+
+    private void getHomeVoice() {
+        rv_voice= findViewById(R.id.rv_voice);
+        rv_voice.setHasFixedSize(true);
+        rv_voice.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL,false));
+        list_voice.add(new Book("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQgxmv3DoWGvFX22GTpxsmby-dsmVaqyQFy87e8eX-LZq4lToT6"));
+        list_voice.add(new Book("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQyRaCf9bJ_OhxCTfUs8xSZ8jlb6pOyjVioRfWfJwRJWclJhIcu"));
+        list_voice.add(new Book("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRhPHCvh2bneBkyySO5Kxp5LevIQNLe_0r7XC1moHtvWZ-Gm0Nm"));
+        list_voice.add(new Book("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKcRb1t1Rd0z6wC7XJ0Oyf95yYw0egwiPWARfxmJzz_wPL3Nz"));
 
 
-        img_menu = findViewById(R.id.img_menu);
-        drawerLayout =findViewById(R.id.drawerlayout_books);
-        img_menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(drawerLayout.isDrawerVisible(GravityCompat.START))
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                else {
-                    drawerLayout.openDrawer(GravityCompat.START);
-                }
-            }
-        });
+        vocieBookAdapter = new AdapterVoiceBook(this,list_voice);
+        rv_voice.setAdapter(vocieBookAdapter);
+    }
 
+    private void getHomePopular() {
+        rv_popular= findViewById(R.id.rv_popular);
+        rv_popular.setHasFixedSize(true);
+        rv_popular.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL,false));
+
+        list_popular.add(new Book("The Glass Hotel","Emily St. John Mandel","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQgxmv3DoWGvFX22GTpxsmby-dsmVaqyQFy87e8eX-LZq4lToT6"));
+        list_popular.add(new Book("Hamnet","Maggie O'Farrell","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQyRaCf9bJ_OhxCTfUs8xSZ8jlb6pOyjVioRfWfJwRJWclJhIcu"));
+        list_popular.add(new Book("Real Life","Brandon Taylor","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRhPHCvh2bneBkyySO5Kxp5LevIQNLe_0r7XC1moHtvWZ-Gm0Nm"));
+        list_popular.add(new Book("Leave the World Behind","Rumaan Alam","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKcRb1t1Rd0z6wC7XJ0Oyf95yYw0egwiPWARfxmJzz_wPL3Nz"));
+        list_popular.add(new Book("Weather","Jenny Offill","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpS4J1a21qkduedyAiQvDSNGuNEY4PQewf0BxItK4iEGKV_QNj"));
+        list_popular.add(new Book("Luster","Raven Leilani","https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR-nudFqcb_jYFcd5n5wIlBHspz0koXdzAz7ioG_dMV6QPTFy5f"));
+        list_popular.add(new Book("The Mirror and the Light","Hilary Mantel","https://www.thehindu.com/books/r545hy/article31532333.ece/alternates/FREE_435/10LRMantelcover"));
+        list_popular.add(new Book("Transcendent Kingdom","Yaa Gyasi","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJokCRDugLCn8aeOW4Kf4W4IXTFouSAaoBZSqWHPgong9YFQgU"));
+        list_popular.add(new Book("Deacon King Kong: A Novel","James McBride","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLgtVh3rrUgU8Z-1r4MTa29KzMXp6QOHPS_wBaHdKQzzfTdYTJ"));
+        list_popular.add(new Book("A Promised Land","Barack Obama","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSQLdPkH8rcP9J5312fLiWkkAIDeb_la_z0kCXsswJf0DMfa5Ay"));
+        list_popular.add(new Book("Vesper Flights","Helen Macdonald","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQzAYTcBXd-MuumP8XboKDATh5kD3dUFjxlmlgwTSBXov0g68p-"));
+        list_popular.add(new Book("Minor Feelings: An Asian American Reckoning","Cathy Park Hong","https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTdTqd0oZNE7qducKX6D0R1HbKOfH8o5QNve7t-hoPoKYAqF0_u"));
+        list_popular.add(new Book("Jack","Marilynne Robinson","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEkiPC8rLSUozNVPmKCTOtzVDYI6O2s-oLQDeEq7SKssGBbqfN"));
+
+        popularBookAdapter = new AdapterPopularBook(this,list_popular);
+        rv_popular.setAdapter(popularBookAdapter);
     }
 
     @Override
