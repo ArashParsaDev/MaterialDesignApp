@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:layout_margin="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_dwonload"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/textcolor_wallpaper"
+            android:text="کیفیت تصویرمورد نظر خود را انتخاب کنید"
+            />
+
+
+        <view
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+
+            />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/textcolor_wallpaper"
+                android:text="1080"
+                android:textColor="@color/textcolor_wallpaper"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/textcolor_wallpaper"
+                android:text="720"
+                android:textColor="@color/textcolor_wallpaper"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/textcolor_wallpaper"
+                android:text="480"
+                android:textColor="@color/textcolor_wallpaper"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/background_btn_wallpaper1"
+            android:text="دانلود"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorAccent_wallpaper1"
+            app:cornerRadius="8dp"
+            android:id="@+id/btn_detailsWall_download"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

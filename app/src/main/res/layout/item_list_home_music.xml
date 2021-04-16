@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="4dp"
+    android:background="@color/background_color_music"
+    android:layoutDirection="rtl">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_img"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="@color/background_color_music"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            app:cardElevation="4dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_itemHome_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:cardBackgroundColor="@color/background_color_card_music1"
+            android:layout_toLeftOf="@id/card_img"
+            android:layout_marginRight="-24dp"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="8dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30dp"
+                android:padding="8dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_itemHome_nameSong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:text="آهنگ"
+                    android:textColor="@color/textcolor_music"
+                    />
+                <TextView
+                    android:id="@+id/tv_itemHome_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp"
+                    android:text="اسم خواننده"
+                    android:textColor="@color/textcolor_music"
+                    android:layout_below="@id/tv_itemHome_nameSong"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_itemHome_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:text="03:40"
+                    android:textColor="@color/textcolor_music"
+                    android:layout_alignParentLeft="true"
+                    />
+                <ImageView
+                    android:id="@+id/iv_listHome_play"
+                    android:layout_width="18sp"
+                    android:layout_height="18sp"
+                    app:srcCompat="@drawable/ic_baseline_play_circle_outline_24"
+                    app:tint="@color/white"
+                    android:rotation="180"
+                    android:layout_below="@id/tv_itemHome_time"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="4dp"/>
+
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+
+

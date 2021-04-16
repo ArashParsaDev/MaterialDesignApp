@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_music"
+    android:layoutDirection="rtl"
+    tools:context=".part3.PlayListMusicActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_baseline_more_vert_24"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/bg_listhome_play"
+        android:scrollbars="none"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civ_listHome"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="36dp" />
+
+                    <com.marcinmoskala.arcseekbar.ArcSeekBar
+                        android:layout_width="250dp"
+                        android:layout_height="220dp"
+                        android:layout_below="@id/civ_listHome"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-200dp"
+                        android:rotation="180"
+                        app:enabled="true"
+                        app:maxProgress="100"
+                        app:progress="100"
+                        app:progressBackgroundColor="@color/background_color_card_music1"
+                        app:progressBackgroundWidth="4dp"
+                        app:progressColor="@color/background_color_music"
+                        app:progressWidth="4dp"
+                        app:roundEdges="true"
+                        app:thumb="@drawable/bg_thumb" />
+
+                    <RelativeLayout
+                        android:id="@+id/time"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/civ_listHome"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="24dp">
+
+                        <TextView
+                            android:id="@+id/tv_listHome_startTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="00:00"
+                            android:textColor="@color/textcolor_music1"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_listHome_endTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="03:54"
+                            android:textColor="@color/textcolor_music1"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_listHome_nameSong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/time"
+                        android:layout_marginTop="56dp"
+                        android:gravity="center"
+                        android:text="اسم آهنگ"
+                        android:textColor="@color/textcolor_music1"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_listHome_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_listHome_nameSong"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="خواننده"
+                        android:textColor="@color/textcolor_music1"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_listHome_name"
+                        android:layout_marginTop="56dp"
+                        android:layout_marginBottom="72dp"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <ImageView
+                            android:id="@+id/iv_download"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_baseline_get_app_24"
+                            app:tint="@color/background_color_music" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_baseline_equalizer_24"
+                            app:tint="@color/background_color_music" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_baseline_shuffle_24"
+                            app:tint="@color/background_color_music" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_baseline_repeat_24"
+                            app:tint="@color/background_color_music" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/ic_baseline_volume_up_24"
+                            app:tint="@color/background_color_music" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linear_1"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            app:srcCompat="@drawable/ic_baseline_skip_next_24"
+                            app:tint="@color/background_color_music" />
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_baseline_fast_forward_24"
+                            app:tint="@color/background_color_music" />
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_baseline_play_circle_outline_24"
+                            app:tint="@color/background_color_music" />
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_baseline_fast_rewind_24"
+                            app:tint="@color/background_color_music" />
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_baseline_skip_previous_24"
+                            app:tint="@color/background_color_music" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

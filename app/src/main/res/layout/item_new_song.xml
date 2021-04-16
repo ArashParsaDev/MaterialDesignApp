@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="185dp"
+    android:layout_margin="4dp"
+    android:layoutDirection="rtl"
+    app:cardBackgroundColor="@color/background_color_music"
+    app:cardCornerRadius="16dp"
+    android:id="@+id/rootView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/iv_newSong"
+        android:scaleType="centerCrop"
+        />
+    <eightbitlab.com.blurview.BlurView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/blurview"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            >
+            <TextView
+                android:id="@+id/tv_newSong_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/textcolor_music"
+                android:textStyle="bold"
+                android:text="فریدون اسرایی"
+                android:maxLines="2"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/tv_newSong_nameSong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/textcolor_music"
+                android:textStyle="bold"
+                android:text="اسم آهنگ"
+                android:gravity="center"
+                android:maxLines="2"
+                android:layout_marginTop="8dp"
+                />
+        </LinearLayout>
+
+    </eightbitlab.com.blurview.BlurView>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
