@@ -20,11 +20,30 @@
     <color name="textcolor_food">#1b1b1b</color>
 
 
-    //part2
-    <color name="colorAccent_music">#FFEB3B</color>
-    <color name="background_color_music">#102027</color>
-    <color name="background_color_card_music">#ffa000</color>
-    <color name="background_color_card_music1">#1a237e</color>
+    //part3
+    <color name="background_color_music">#202020</color>
+    <color name="background_color_musicother1">#2C4176</color>
+    <color name="background_color_musicother2">#5E3385</color>
+
+    <color name="colorAccent_music">#D7D7D7</color>
+    <color name="colorAccent_music1">@color/white</color>
+    <color name="colorAccent_music2">#FFCE2F</color>
+    <color name="background_color_card_music1">#303030</color>
+
     <color name="textcolor_music">#ffffff</color>
+    <color name="textcolor_music1">#202020</color>
+
+
+
+
+    //part4
+    <color name="background_color_wallpaper">#0A0A1E</color>
+
+    <color name="colorAccent_wallpaper">#D7D7D7</color>
+    <color name="colorAccent_wallpaper1">#FFCE2F</color>
+    <color name="background_color_card_wallpaper1">#080C31</color>
+    <color name="background_btn_wallpaper1">#5C196D</color>
+
+    <color name="textcolor_wallpaper">#ffffff</color>
 
 </resources>

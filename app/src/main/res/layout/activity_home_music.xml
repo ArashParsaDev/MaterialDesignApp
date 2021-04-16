@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color_music"
+    android:layoutDirection="rtl"
     tools:context=".part3.HomeMusicActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/toolar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_baseline_menu_24"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_baseline_search_24"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:cardCornerRadius="12dp"
+        app:strokeColor="?attr/colorAccent"
+        app:strokeWidth="1dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_HomeMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color_music"
+            app:tabIndicatorColor="@color/background_color_card_music1"
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/textcolor_music"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabTextColor="@color/colorAccent_music" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_HomeMusic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card_tabLayout" />
+
+
+</RelativeLayout>
