@@ -11,36 +11,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".part4.DetailsWallpaperActivity"
-            android:theme="@style/AppTheme_Wallpaper">
-
-        </activity>
-        <activity
-            android:name=".part4.HomeWallpaperActivity"
-            android:theme="@style/AppTheme_Wallpaper">
-
-        </activity>
-        <activity
-            android:name=".part4.IntroWallpaperActivity"
-            android:theme="@style/AppTheme_Wallpaper">
-
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
+        <activity
+            android:name=".part4.DetailsWallpaperActivity"
+            android:theme="@style/AppTheme_Wallpaper"></activity>
+        <activity
+            android:name=".part4.HomeWallpaperActivity"
+            android:theme="@style/AppTheme_Wallpaper"></activity>
+        <activity
+            android:name=".part4.IntroWallpaperActivity"
+            android:theme="@style/AppTheme_Wallpaper"></activity>
         <activity
             android:name=".part3.PlayVideoMusicActivity"
             android:theme="@style/AppTheme_Music" />
         <activity android:name=".part3.PlayListMusicActivity" />
         <activity
             android:name=".part3.HomeMusicActivity"
-            android:theme="@style/AppTheme_Music" >
-
-        </activity>
+            android:theme="@style/AppTheme_Music"></activity>
         <activity
             android:name=".part3.LoginMusicActivity"
             android:theme="@style/AppTheme_Music" />
@@ -49,7 +42,9 @@
             android:theme="@style/AppTheme_Food" />
         <activity
             android:name=".part2.HomeActivityFood"
-            android:theme="@style/AppTheme_Food" />
+            android:theme="@style/AppTheme_Food">
+
+        </activity>
         <activity
             android:name=".part1.DetailBookActivity"
             android:theme="@style/AppTheme_Ebook_normal" />
